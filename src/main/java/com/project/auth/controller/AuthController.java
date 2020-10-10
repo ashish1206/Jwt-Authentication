@@ -31,7 +31,7 @@ public class AuthController {
 			return new ResponseEntity<AuthResponse>(response, HttpStatus.OK);
 		}
 		catch(Exception e) {
-			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, e.getMessage());
+			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "unauthorized");
 		}
 	}
 	

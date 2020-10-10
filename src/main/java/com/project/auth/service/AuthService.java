@@ -28,7 +28,7 @@ public class AuthService {
 					authRequest.getUsername(), authRequest.getPassword()));
 			return genrateJWT(authRequest);
 		}
-		catch(BadCredentialsException e) {
+		catch(Exception e) {
 			throw new Exception("unauthorized");
 		}
 	}
